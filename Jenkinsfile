@@ -5,7 +5,7 @@ pipeline {
    }
     stages{
        stage('checkout') {
-        stepsi {
+        steps {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/sunilvirat/node.git']]])
         }
                 }
