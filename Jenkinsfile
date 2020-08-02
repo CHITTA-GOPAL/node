@@ -18,7 +18,7 @@ pipeline {
     stage('Publish image'){
       steps{
           withCredentials([string(credentialsId: 'docker_pwd', variable: 'dockerhub_pwd')]) {
-          sh "sudo docker login - venkatasunil -p $dockerhub_pwd"
+          sh "sudo docker login -u venkatasunil -p $dockerhub_pwd"
           sh "sudo docker push venkatasunil/nodeapp:$BUILD_NUMBER"
               }
           }    
