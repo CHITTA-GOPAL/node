@@ -54,4 +54,3 @@ pipeline {
                                      sudo docker rmi node:carbon'''
                     }
             }
-}
