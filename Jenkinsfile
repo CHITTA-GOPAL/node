@@ -34,7 +34,7 @@ pipeline {
     steps{
        sshagent(['dockeswarmnode']){
            sh "scp -o StricthostKeyChecking=no dockerstack.yaml dockerswarm@172.31.33.211:/home/dockerswarm"
-       sh label: '', script: 'sh sudo docker stack deploy -c dockerstack.yaml assignment'
+       sh label: '', script: 'sh sudo docker stack deploy -c /home/dockerswarm/dockerstack.yaml assignment'
                     }
       }
    }
