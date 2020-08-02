@@ -1,6 +1,0 @@
-version: '3.7'
-services:
- gol:
-   image: docker.io/venkatasunil/nodeapp:latest
-   ports:
-   - "8000:8080"
