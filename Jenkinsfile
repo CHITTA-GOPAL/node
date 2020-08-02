@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build Docker Image'){
             steps{
-                sh "sudo docker build . -t venkatasunil/nodeapp:$BUILD_NUMBER"
+                sh "sudo docker buil . -t venkatasunil/nodeapp:$BUILD_NUMBER"
             }
         }
     stage('Publish image'){
@@ -54,3 +54,4 @@ pipeline {
                                      sudo docker rmi node:carbon'''
                     }
             }
+}
