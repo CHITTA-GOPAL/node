@@ -47,5 +47,12 @@ pipeline {
                                     }
           }
                     }
+        post {
+        always {
+            sh label: '', script: '''sudo docker rmi venkatasunil/nodeapp:$BUILD_NUMBER
+sudo docker rmi venkatasunil/nodeapp:$BUILD_NUMBER
+sudo docker rmi node:carbon
+'''
+                    }
  }
 }
