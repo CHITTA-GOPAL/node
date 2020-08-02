@@ -35,7 +35,7 @@ pipeline {
         sh "chmod +x dockerstack-apply.sh"
        sshagent(['dockeswarmnode']){
            sh "scp -o StricthostKeyChecking=no dockerstack.yaml dockerstack-apply.sh dockerswarm@172.31.33.211:/home/dockerswarm"
-            sh "dockerswarm@172.31.33.211 /home/dockerswarm/dockerstack-apply.sh"
+            sh "ssh dockerswarm@172.31.33.211 /home/dockerswarm/dockerstack-apply.sh"
                     }
       }
    }
